@@ -1,14 +1,14 @@
 {
   "name": "generator-leanbot",
-  "version": "0.4.0",
-  "description": "Hubot generator for Yeoman",
+  "version": "1.0.0",
+  "description": "Yeoman Hubot generator for LeanKit",
   "license": "MIT",
   "main": "generators/app/index.js",
-  "repository": "github/generator-hubot",
+  "repository": "github/generator-leanbot",
   "author": {
-    "name": "Josh Nichols",
-    "email": "josh@technicalpickles.com",
-    "url": "https://github.com/technicalpickles"
+    "name": "JD Courtoy",
+    "email": "jd.courtoy@leankit.com",
+    "url": "https://github.com/bunk"
   },
   "engines": {
     "node": ">=0.10.0"
