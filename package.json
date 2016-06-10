@@ -1,0 +1,60 @@
+{
+  "name": "generator-leanbot",
+  "version": "0.4.0",
+  "description": "Hubot generator for Yeoman",
+  "license": "MIT",
+  "main": "generators/app/index.js",
+  "repository": "github/generator-hubot",
+  "author": {
+    "name": "Josh Nichols",
+    "email": "josh@technicalpickles.com",
+    "url": "https://github.com/technicalpickles"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore ./",
+    "clean": "rm -rf lib",
+    "build": "cp -r src/ lib/ && babel -d lib/generators/ src/generators --only index.js",
+    "test": "npm run lint && npm run coverage",
+    "test-and-exit": "NODE_ENV=test mocha --compilers js:babel-register -r ./spec-helpers -R spec 'src/**/*.spec.js'",
+    "test-watch": "NODE_ENV=test mocha -w --compilers js:babel-register -r ./spec-helpers -R spec 'src/**/*.spec.js'",
+    "coverage": "nyc -r text-summary -r html --require=babel-register -- npm run test-and-exit",
+    "show-coverage": "open ./coverage/index.html",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "files": [
+    "lib/generators/app",
+    "lib/generators/script"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "hubot",
+    "hubot-script"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "lodash": "^4.13.1",
+    "npm-name": "^3.0.0",
+    "yeoman-generator": "^0.23.3",
+    "yosay": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-node5": "^11.1.0",
+    "coffee-script": "^1.6.3",
+    "eslint": "^2.11.1",
+    "eslint-config-leankit": "^2.0.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "grunt": "~1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mocha-test": "^0.12.4",
+    "grunt-release": "~0.13.1",
+    "matchdep": "~1.0.1",
+    "mocha": "*"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "<%= botName %>",
+  "version": "0.0.0",
+  "private": true,
+
+  "author": "<%= botOwner %>",
+
+  "description": "<%= botDescription %>",
+
+  "dependencies": {
+    "aupair": "^1.1.1",
+    "aupair-api": "^1.0.0",
+    "babel-core": "^6.9.0",
+    "babel-hubot": "^0.2.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-node5": "^11.1.0",
+    "bunyan": "^1.8.1",
+    "bunyan-prettystream": "^0.1.3",
+    "bunyan-slack": "0.0.10",
+    "coffee-script": "^1.10.0",
+    "shortid": "^2.2.6"
+  },
+
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^2.10.1",
+    "eslint-config-leankit": "^2.0.0",
+    "eslint-plugin-babel": "^3.2.0"
+  },
+
+  "engines": {
+    "node": ">=5.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+debug: true
+
+build:
+  image: 'node:5'
+  commands:
+    - "npm install"
+    - "npm install buildgoggles@0.2.0-3"
+    - "./node_modules/buildgoggles/bin/buildgoggles --releaseOwner=BanditSoftware --releaseBranch=master"
+
+cache:
+  mount:
+    - node_modules
+    - .git
